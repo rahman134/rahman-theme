@@ -24,6 +24,7 @@ body::before {
   left: 0;
   right: 0;
   top: 0;
+  bottom: 0;
   height: 100vh;
   z-index: -1;
 }
@@ -33,6 +34,12 @@ body::before {
     background-attachment: fixed;
   }
 }
+
+/* @media (min-width: 768px) {
+  body::before {
+    background-attachment: fixed;
+  }
+} */
 
 a {
   color: #18d26e;
@@ -94,7 +101,6 @@ h6 {
 
 #header h2 span {
   color: #fff;
-  border-bottom: 2px solid #18d26e;
   padding-bottom: 6px;
 }
 
@@ -128,6 +134,7 @@ h6 {
 
 @media (max-width: 992px) {
   #header h1 {
+    color: #18d26e;
     font-size: 36px;
   }
 
@@ -177,6 +184,14 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  #header {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  #header h2 {
+    font-size: 16px;
+  }
+
   #header.header-top {
     height: 60px;
   }
@@ -209,7 +224,7 @@ h6 {
   position: relative;
 }
 
-.navbar li+li {
+.navbar li + li {
   margin-left: 30px;
 }
 
@@ -248,7 +263,7 @@ h6 {
 }
 
 .navbar a:hover:before,
-.navbar li:hover>a:before,
+.navbar li:hover > a:before,
 .navbar .active:before {
   visibility: visible;
   width: 25px;
@@ -257,7 +272,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #fff;
 }
 
@@ -322,7 +337,7 @@ h6 {
   padding: 12px 20px;
 }
 
-.navbar-mobile li+li {
+.navbar-mobile li + li {
   margin: 0;
 }
 
@@ -963,7 +978,7 @@ section .container {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1060,7 +1075,7 @@ section .container {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1129,7 +1144,7 @@ section .container {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #18d26e;
   border: 0;
   padding: 10px 30px;
@@ -1138,7 +1153,7 @@ section .container {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #15bb62;
 }
 
